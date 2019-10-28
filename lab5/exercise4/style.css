@@ -1,0 +1,43 @@
+body
+{
+    text-align: center;
+    background-color: rosybrown;
+    align-content: center;
+}
+p{
+  background-color: lightyellow;
+  font-weight: 700;
+  font-size: 22pt;
+}
+
+form{
+background-color: azure;
+margin: 0 auto;
+width: 500px;
+}
+
+
+table
+{
+    text-align: center;
+    background-color: lightyellow;
+}
+
+tr{
+  background-color: orange;
+}
+
+input{
+  font-size: 17pt;
+}
+
+td{
+  font-size: 15pt;
+
+}
+
+textarea{
+  font-size: 17pt;
+  height: 33%;
+  width: 33%;
+}

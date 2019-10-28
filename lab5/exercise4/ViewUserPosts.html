@@ -1,0 +1,32 @@
+<html>
+  <head>
+
+    <link href="style.css"
+    rel="stylesheet"
+    type="text/css"/>
+
+  </head>
+  <body>
+    <?php
+    $mysqli = new mysqli("mysql.eecs.ku.edu", "flobbus", "flobbysia", "flobbus");
+      if ($mysqli->connect_errno) {
+        printf("Connect failed: %s\n", $mysqli->connect_error);
+        exit();
+      }
+      $query = "SELECT user_id FROM Users;";
+      if ($result = $mysqli->query($query)) {
+        echo "<p>Select a User:</p><p><form action=\"ViewUserPosts.php\" method=\"post\"><select name=\"name\">";
+        while ($row = $result->fetch_assoc()) {
+            echo "<option value=\"".$row[user_id]."\" name=\"".$row[user_id]."\">".$row[user_id]."</option>";
+          }
+          echo "</select><br><br><input type=\"submit\" name=\"submit\" value = \"View Posts\"></input></form></p>";
+        }
+    else{
+      echo "<br><br><p>No Registered Users!\n</p>";
+    }
+
+
+    ?>
+
+  </body>
+</html>
